@@ -1,0 +1,7 @@
+[user]
+	name = Jace Bennett
+	email = jace.bennett@gmail.com
+[alias]
+	st = status
+	co = checkout
+	br = branch
