@@ -1,0 +1,6 @@
+[submodule "emacs.d.linkme."]
+	path = emacs.d.linkme.
+	url = https://github.com/overtone/emacs-live.git
+[submodule "oh-my-zsh.linkme."]
+	path = oh-my-zsh.linkme.
+	url = https://github.com/robbyrussell/oh-my-zsh.git
