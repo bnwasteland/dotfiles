@@ -3,7 +3,9 @@ require 'pathname'
 desc "Pull the latest dotfiles from github and install"
 task :default => [:update]
 
-task :update => [:update_repo, :install]
+task :update => [:update_all, :install]
+
+task :update_all => [:update_repo, 'submodules:update']
 
 task :update_repo do
   sh "git pull"
@@ -13,15 +15,22 @@ desc "Install local versions"
 task :install do
   targets = Dir['*.linkme*']
 
-  targets.each do |target| 
+  targets.each do |target|
     ensure_link target_name(target), link_name(target)
   end
 end
 
 namespace :submodules do
   desc "Update submodules to their respective HEAD's"
-  task :update do
+  task :pull => [:pull_each, :update]
+
+  task :pull_each do
     sh "git submodule foreach git pull"
+  end
+
+  desc "Update submodules to the specified commits"
+  task :update do
+    sh "git submodule update --init --recursive"
   end
 end
 
@@ -66,4 +75,3 @@ end
 def home
   Pathname.new(ENV['HOME'])
 end
-
