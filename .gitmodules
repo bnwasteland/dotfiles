@@ -3,8 +3,7 @@
 	url = https://github.com/overtone/emacs-live.git
 [submodule "oh-my-zsh.linkme."]
 	path = oh-my-zsh.linkme.
-	url = https://github.com/robbyrussell/oh-my-zsh.git
-
+	url = git@github.com:bnwasteland/oh-my-zsh.git
 [submodule "vim.linkme./bundle/ack"]
 	path = vim.linkme./bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
