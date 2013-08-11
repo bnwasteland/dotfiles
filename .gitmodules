@@ -5,3 +5,138 @@
 	path = oh-my-zsh.linkme.
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 
+[submodule "vim.linkme./bundle/ack"]
+	path = vim.linkme./bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim.linkme./bundle/ctrlp"]
+	path = vim.linkme./bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim.linkme./bundle/easymotion"]
+	path = vim.linkme./bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "vim.linkme./bundle/fireplace"]
+	path = vim.linkme./bundle/fireplace
+	url = https://github.com/tpope/vim-fireplace.git
+[submodule "vim.linkme./bundle/fugitive"]
+	path = vim.linkme./bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim.linkme./bundle/gist"]
+	path = vim.linkme./bundle/gist
+	url = https://github.com/mattn/gist-vim.git
+[submodule "vim.linkme./bundle/kwbd"]
+	path = vim.linkme./bundle/kwbd
+	url = https://github.com/rgarver/Kwbd.vim.git
+[submodule "vim.linkme./bundle/nerdtree"]
+	path = vim.linkme./bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim.linkme./bundle/sensible"]
+	path = vim.linkme./bundle/sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "vim.linkme./bundle/surround"]
+	path = vim.linkme./bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim.linkme./bundle/syntastic"]
+	path = vim.linkme./bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim.linkme./colors/getafe"]
+	path = vim.linkme./colors/getafe
+	url = https://github.com/larssmit/vim-getafe.git
+[submodule "vim.linkme./colors/github"]
+	path = vim.linkme./colors/github
+	url = https://github.com/telamon/vim-color-github.git
+[submodule "vim.linkme./colors/irblack"]
+	path = vim.linkme./colors/irblack
+	url = https://github.com/twerth/ir_black.git
+[submodule "vim.linkme./colors/janus"]
+	path = vim.linkme./colors/janus
+	url = https://github.com/TechnoGate/janus-colors.git
+[submodule "vim.linkme./colors/molokai"]
+	path = vim.linkme./colors/molokai
+	url = https://github.com/vim-scripts/molokai.git
+[submodule "vim.linkme./colors/pyte"]
+	path = vim.linkme./colors/pyte
+	url = https://github.com/vim-scripts/pyte.git
+[submodule "vim.linkme./colors/samplerpack"]
+	path = vim.linkme./colors/samplerpack
+	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
+[submodule "vim.linkme./colors/solarized"]
+	path = vim.linkme./colors/solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim.linkme./colors/vividchalk"]
+	path = vim.linkme./colors/vividchalk
+	url = https://github.com/tpope/vim-vividchalk.git
+[submodule "vim.linkme./langs/arduino"]
+	path = vim.linkme./langs/arduino
+	url = https://github.com/vim-scripts/Arduino-syntax-file.git
+[submodule "vim.linkme./langs/clojure"]
+	path = vim.linkme./langs/clojure
+	url = https://github.com/guns/vim-clojure-static.git
+[submodule "vim.linkme./langs/coffeescript"]
+	path = vim.linkme./langs/coffeescript
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim.linkme./langs/csv"]
+	path = vim.linkme./langs/csv
+	url = https://github.com/chrisbra/csv.vim.git
+[submodule "vim.linkme./langs/cucumber"]
+	path = vim.linkme./langs/cucumber
+	url = https://github.com/tpope/vim-cucumber.git
+[submodule "vim.linkme./langs/elixir"]
+	path = vim.linkme./langs/elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "vim.linkme./langs/erlang"]
+	path = vim.linkme./langs/erlang
+	url = https://github.com/jimenezrick/vimerl.git
+[submodule "vim.linkme./langs/git"]
+	path = vim.linkme./langs/git
+	url = https://github.com/tpope/vim-git.git
+[submodule "vim.linkme./langs/golang"]
+	path = vim.linkme./langs/golang
+	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "vim.linkme./langs/haml"]
+	path = vim.linkme./langs/haml
+	url = https://github.com/tpope/vim-haml.git
+[submodule "vim.linkme./langs/handlebars"]
+	path = vim.linkme./langs/handlebars
+	url = https://github.com/nono/vim-handlebars.git
+[submodule "vim.linkme./langs/haskell"]
+	path = vim.linkme./langs/haskell
+	url = https://github.com/wlangstroth/vim-haskell.git
+[submodule "vim.linkme./langs/javascript"]
+	path = vim.linkme./langs/javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim.linkme./langs/less"]
+	path = vim.linkme./langs/less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "vim.linkme./langs/markdown"]
+	path = vim.linkme./langs/markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "vim.linkme./langs/minitest"]
+	path = vim.linkme./langs/minitest
+	url = https://github.com/sunaku/vim-ruby-minitest.git
+[submodule "vim.linkme./langs/nodejs"]
+	path = vim.linkme./langs/nodejs
+	url = https://github.com/mmalecki/vim-node.js.git
+[submodule "vim.linkme./langs/puppet"]
+	path = vim.linkme./langs/puppet
+	url = https://github.com/ajf/puppet-vim.git
+[submodule "vim.linkme./langs/rails"]
+	path = vim.linkme./langs/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "vim.linkme./langs/rspec"]
+	path = vim.linkme./langs/rspec
+	url = https://github.com/skwp/vim-rspec.git
+[submodule "vim.linkme./langs/ruby"]
+	path = vim.linkme./langs/ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim.linkme./langs/scala"]
+	path = vim.linkme./langs/scala
+	url = https://github.com/rosstimson/scala-vim-support.git
+[submodule "vim.linkme./langs/scss"]
+	path = vim.linkme./langs/scss
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vim.linkme./langs/slim"]
+	path = vim.linkme./langs/slim
+	url = https://github.com/slim-template/vim-slim.git
+[submodule "vim.linkme./langs/textile"]
+	path = vim.linkme./langs/textile
+	url = https://github.com/timcharper/textile.vim.git
