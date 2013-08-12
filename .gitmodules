@@ -139,3 +139,12 @@
 [submodule "vim.linkme./langs/textile"]
 	path = vim.linkme./langs/textile
 	url = https://github.com/timcharper/textile.vim.git
+[submodule "vim.linkme./bundle/lusty"]
+	path = vim.linkme./bundle/lusty
+	url = https://github.com/sjbach/lusty.git
+[submodule "vim.linkme./bundle/airline"]
+	path = vim.linkme./bundle/airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "vim.linkme./bundle/coffee-clean"]
+	path = vim.linkme./bundle/coffee-clean
+	url = git@github.com:tnwinc/vim-coffee-clean.git

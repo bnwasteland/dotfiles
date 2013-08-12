@@ -7,3 +7,5 @@
 	br = branch
 [push]
 	default = simple
+[color]
+	status = auto
