@@ -148,3 +148,6 @@
 [submodule "vim.linkme./bundle/coffee-clean"]
 	path = vim.linkme./bundle/coffee-clean
 	url = git@github.com:tnwinc/vim-coffee-clean.git
+[submodule "vim.linkme./bundle/paredit"]
+	path = vim.linkme./bundle/paredit
+	url = https://github.com/vim-scripts/paredit.vim.git
