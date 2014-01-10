@@ -9,6 +9,7 @@ set ruler " Show line and column number
 set encoding=utf-8 " Set default encoding to UTF-8
 set t_Co=256 " Set terminal to 256 colors
 
+
 ""
 "" Whitespace
 ""
@@ -82,6 +83,15 @@ let g:airline_branch_prefix = '⎇  '
 
 
 ""
+"" NERDTree Pre Customizations
+""
+
+let NERDTreeHijackNetrw = 0
+let NERDTreeWinPos = "right"
+let NERDTreeWinSize = 50
+
+
+""
 "" Plugins
 ""
 
@@ -89,10 +99,67 @@ let mapleader=","
 execute pathogen#infect('bundle/{}', 'langs/{}', 'colors/{}')
 filetype plugin indent on
 
+
+""
+"" NERDTree Post Customizations (ripped off from github.com/carlhuda/janus)
+""
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
+
+autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+autocmd FocusGained * call s:UpdateNERDTree()
+
+
+" If the parameter is a directory, cd into it
+function s:CdIfDirectory(directory)
+  let explicitDirectory = isdirectory(a:directory)
+  let directory = explicitDirectory || empty(a:directory)
+
+  if explicitDirectory
+    exe "cd " . fnameescape(a:directory)
+  endif
+
+  " Allows reading from stdin
+  " ex: git diff | mvim -R -
+  if strlen(a:directory) == 0
+    return
+  endif
+
+  if directory
+    NERDTree
+    wincmd p
+    bd
+  endif
+
+  if explicitDirectory
+    wincmd p
+  endif
+endfunction
+
+" NERDTree utility function
+function s:UpdateNERDTree(...)
+  let stay = 0
+
+  if(exists("a:1"))
+    let stay = a:1
+  end
+
+  if exists("t:NERDTreeBufName")
+    let nr = bufwinnr(t:NERDTreeBufName)
+    if nr != -1
+      exe nr . "wincmd w"
+      exe substitute(mapcheck("R"), "<CR>", "", "")
+      if !stay
+        wincmd p
+      end
+    endif
+  endif
+endfunction
+
+
 ""
 "" Global Mappings
 ""
-nmap <silent> <leader>n :NERDTreeToggle<CR>
+nmap <silent> <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 nmap <silent> <leader>j :LustyJuggler<CR>
 nmap <silent> <leader>J :LustyJugglePrevious<CR>
 nmap <silent> <leader>bd :Kwbd<CR>
