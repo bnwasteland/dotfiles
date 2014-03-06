@@ -1,2 +1,2 @@
-prefix = $NPM_PACKAGES
+prefix = ${NPM_PACKAGES}
 
