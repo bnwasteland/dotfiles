@@ -46,6 +46,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+export EDITOR=vim
+
 # Gem
 export GEM_HOME=$(ruby -e "puts Gem.user_dir")
 export GEM_PATH=$GEM_HOME:$GEM_PATH
