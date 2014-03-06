@@ -47,7 +47,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Gem
-export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+export GEM_HOME=$(ruby -e "puts Gem.user_dir")
+export GEM_PATH=$GEM_HOME:$GEM_PATH
+export PATH=$GEM_HOME/bin:$PATH
 
 #Home bins
 export PATH=$HOME/bin:$PATH
