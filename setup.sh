@@ -31,6 +31,12 @@ curl -s -u $token:x-oauth-basic --data "{\"title\":\"$keyid\",\"key\":\"$pubkey\
 
 
 
+#install oh-my-zsh
+
+curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+
+
 #install dotfiles
 
 git clone git@github.com:bnwasteland/dotfiles.git
@@ -38,9 +44,4 @@ git clone git@github.com:bnwasteland/dotfiles.git
 cd dotfiles
 . install.sh
 cd ..
-
-
-
-#install oh-my-zsh
-curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
