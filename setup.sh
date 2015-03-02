@@ -54,7 +54,7 @@ existingkey=$(greppablejson $ghkeysfile | grep $pubkeyvalue)
 if [[ ! $existingkey ]]
 then
   echo Registering ssh key with github
-  curl -s -u $ghtoken:x-oauth-basic --data "{\"title\":\"$keyid\",\"key\":\"$pubkey\"}" https://api.github.com/user/keys
+  curl -s -o /dev/null -u $ghtoken:x-oauth-basic --data "{\"title\":\"$keyid\",\"key\":\"$pubkey\"}" https://api.github.com/user/keys
 else
   echo ssh key already registered with github, skipping
 fi
