@@ -7,8 +7,6 @@ if [ ! -d $ZSH ]
 then
   echo "\033[0;34mCloning Oh My Zsh...\033[0m"
   env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSH
-else
-  echo "oh-my-zsh already installed"
 fi
 
 # Set name of the theme to load.
