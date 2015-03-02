@@ -2,11 +2,12 @@
 
 #ensure ssh key
 keyid=$USER@$HOSTNAME
-pubkeyfile=$HOME/.ssh/id_rsa.pub
+keyfile=$HOME/.ssh/id_rsa
+pubkeyfile=$keyfile.pub
 if [[ ! -e $pubkeyfile ]]
 then
   echo generating ssh key
-  ssh-keygen -C "'$keyid'"
+  ssh-keygen -C "$keyid" -I "$keyid" -f "$keyfile"
 else
   echo ssh key already generated, skipping
 fi
