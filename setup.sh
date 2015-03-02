@@ -7,6 +7,8 @@ if [[ ! -e $pubkeyfile ]]
 then
   echo generating ssh key
   ssh-keygen -C "'$keyid'"
+else
+  echo ssh key already generated, skipping
 fi
 pubkey=$(cat $pubkeyfile)
 pubkeyvalue=$(cat $pubkeyfile | awk '{print $2}')
@@ -33,22 +35,26 @@ then
     ghscopes="[\"repo\", \"write:public_key\"]"
     ghauthnotes="dev env $keyid"
     curl --silent --output $ghauthfile --user $ghuser:$ghpass --header "X-GitHub-OTP: $ghotp" --data "{\"scopes\": $ghscopes, \"note\": \"$ghauthnotes\"}" https://api.github.com/authorizations
+  else
+    echo github authorization already acquired, skipping
   fi
   echo Recording github api oauth token in $ghtokenfile
   greppablejson $ghauthfile | grep -w token: | sed 's/.*: //' > $ghtokenfile
+else
+  echo github oauth token already known, skipping
 fi
 
-githubtoken=$(cat $ghtokenfile)
+ghtoken=$(cat $ghtokenfile)
 
 
 #ensure ssh key registered on github
 ghkeysfile=$HOME/.github.keys
-curl -s -o $ghkeysfile -u $token:x-oauth-basic https://api.github.com/user/keys
+curl -s -o $ghkeysfile -u $ghtoken:x-oauth-basic https://api.github.com/user/keys
 existingkey=$(greppablejson $ghkeysfile | grep $pubkeyvalue)
 if [[ ! $existingkey ]]
 then
   echo Registering ssh key with github
-  curl -s -u $token:x-oauth-basic --data "{\"title\":\"$keyid\",\"key\":\"$pubkey\"}" https://api.github.com/user/keys
+  curl -s -u $ghtoken:x-oauth-basic --data "{\"title\":\"$keyid\",\"key\":\"$pubkey\"}" https://api.github.com/user/keys
 else
   echo ssh key already registered with github, skipping
 fi
@@ -66,14 +72,15 @@ else
 fi
 
 #install dotfiles
-dotfiledir=$HOME/dotfiles
+dotfiledir=$HOME/dotfiles1
 if [[ ! -e $dotfiledir ]]
 then
   echo Installing dotfiles
   git clone git@github.com:bnwasteland/dotfiles.git $dotfiledir
-  pushd $dotfiledir
-  . install.sh
-  popd
+  cd $dotfiledir
+  ls
+  . $dotfiledir/install.sh
+  cd ..
 else
   echo dotfiles already installed, skipping
 fi
