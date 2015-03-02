@@ -72,13 +72,12 @@ else
 fi
 
 #install dotfiles
-dotfiledir=$HOME/dotfiles1
+dotfiledir=$HOME/.dotfiles
 if [[ ! -e $dotfiledir ]]
 then
   echo Installing dotfiles
   git clone git@github.com:bnwasteland/dotfiles.git $dotfiledir
   cd $dotfiledir
-  ls
   . $dotfiledir/install.sh
   cd ..
 else
