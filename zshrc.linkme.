@@ -72,3 +72,5 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 #Home bins
 export PATH=$HOME/bin:$PATH
 
+[ -f /usr/local/bin/dnvm.sh ] && source dnvm.sh
+
