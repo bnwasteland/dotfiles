@@ -151,3 +151,6 @@
 [submodule "oh-my-zsh.linkme."]
 	path = oh-my-zsh.linkme.
 	url = git@github.com:bnwasteland/oh-my-zsh.git
+[submodule "vim.linkme./langs/rust.vim"]
+	path = vim.linkme./langs/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
