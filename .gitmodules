@@ -154,3 +154,6 @@
 [submodule "vim.linkme./langs/rust.vim"]
 	path = vim.linkme./langs/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim.linkme./langs/vim-toml"]
+	path = vim.linkme./langs/vim-toml
+	url = https://github.com/cespare/vim-toml
