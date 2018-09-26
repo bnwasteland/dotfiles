@@ -2,5 +2,5 @@
 
 bootstrap:
         
-        bash <(curl -s https://raw.githubusercontent.com/bnwasteland/dotfiles/master/setup.sh)
+        bash <(curl -s https://raw.githubusercontent.com/jacebennett/dotfiles/master/setup.sh)
 
